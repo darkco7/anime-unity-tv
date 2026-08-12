@@ -1,0 +1,112 @@
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --border: #30363d;
+  --fg: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --accent-2: #3fb950;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0 0 .5rem;
+  font-size: 2.25rem;
+  letter-spacing: -.02em;
+}
+
+header p { color: var(--muted); margin: .25rem 0 0; }
+
+.hero {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.hero .version { color: var(--muted); font-size: .9rem; margin-bottom: .25rem; }
+.hero .download-btn {
+  display: inline-block;
+  background: var(--accent-2);
+  color: #fff;
+  padding: .85rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 1rem 0 .5rem;
+  transition: opacity .15s ease;
+}
+.hero .download-btn:hover { text-decoration: none; opacity: .9; }
+.hero .apk-size { color: var(--muted); font-size: .85rem; }
+
+section { margin: 2.5rem 0; }
+section h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: .5rem; }
+
+code, pre {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+code { padding: .15rem .4rem; font-size: .9em; }
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: .9rem;
+}
+pre code { background: none; border: none; padding: 0; }
+
+ol, ul { padding-left: 1.25rem; }
+li { margin: .5rem 0; }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: .85rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.note {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.fallback-note { color: var(--muted); font-size: .85rem; margin-top: .75rem; }
+
+@media (max-width: 540px) {
+  header h1 { font-size: 1.6rem; }
+  .hero { padding: 1.25rem; }
+}

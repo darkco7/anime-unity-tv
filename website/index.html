@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>AnimeUnity TV - Download APK per Fire TV / Android TV</title>
+  <meta name="description" content="Scarica l'APK di AnimeUnity TV per Amazon Fire TV e Android TV. Installazione guidata via ADB o app Downloader." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>AnimeUnity TV</h1>
+    <p>Streaming di anime su Fire TV e Android TV</p>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="version">
+        Versione: <strong id="latest-version">caricamento…</strong>
+        <span id="latest-date"></span>
+      </div>
+
+      <a id="download-btn" class="download-btn" href="#">Scarica APK</a>
+      <div><span id="apk-size" class="apk-size"></span></div>
+
+      <p id="fallback-note" class="fallback-note" hidden></p>
+    </section>
+
+    <section>
+      <h2>Come installare su Fire TV</h2>
+      <p>Puoi installare l'APK in due modi. Scegli quello piu comodo.</p>
+
+      <h3>Opzione A - Tramite app Downloader (consigliata, senza PC)</h3>
+      <ol>
+        <li>Sul Fire TV installa l'app <strong>Downloader</strong> dallo store di Amazon.</li>
+        <li>Apri Downloader e inserisci questo URL:</li>
+      </ol>
+      <pre><code>https://&lt;alias&gt;.github.io/anime-unity-tv/install.html</code></pre>
+      <ol start="3">
+        <li>Segui le istruzioni a schermo per scaricare e installare l'APK.</li>
+      </ol>
+
+      <h3>Opzione B - Tramite ADB da PC</h3>
+      <ol>
+        <li>Abilita <strong>Opzioni sviluppatore</strong> e <strong>Debug USB</strong> sul Fire TV.</li>
+        <li>Connetti il Fire TV alla stessa rete del PC.</li>
+        <li>Da terminale sul PC:</li>
+      </ol>
+      <pre><code>adb connect &lt;IP_FIRE_TV&gt;:5555
+adb install -r animeunity-tv.apk
+adb shell am start -n com.example.firetv.debug/com.example.firetv.MainActivity</code></pre>
+
+      <div class="note">
+        Non sono raccolti dati personali. Niente cookie, niente analytics di terze parti.
+      </div>
+    </section>
+
+    <section>
+      <h2>Requisiti</h2>
+      <ul>
+        <li>Amazon Fire TV (Fire TV Stick 4K o piu recente) o TV Android 9+.</li>
+        <li>Connessione internet per lo streaming.</li>
+        <li>Controller compatibile (la navigazione e ottimizzata per D-pad).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Domande o problemi?</h2>
+      <p>Apri una <a href="https://github.com/YOUR_BURNER_ALIAS/anime-unity-tv/issues">issue su GitHub</a>. Leggi prima le istruzioni di installazione qui sopra.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Questo progetto e distribuito come software gratuito senza garanzia. Verifica la licenza dell'APK prima dell'uso.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
