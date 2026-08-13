@@ -1,5 +1,5 @@
 const CONFIG = {
-  owner: "YOUR_BURNER_ALIAS",
+  owner: "darkco7",
   repo: "anime-unity-tv",
   appName: "AnimeUnity TV",
   apkNameHint: ".apk"
